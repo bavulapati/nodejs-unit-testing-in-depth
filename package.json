@@ -1,0 +1,29 @@
+{
+  "name": "nodejs-unit-testing-in-depth",
+  "version": "1.0.0",
+  "description": "Udemy course - nodejs unit testing in depth",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bavulapati/nodejs-unit-testing-in-depth.git"
+  },
+  "keywords": [
+    "nodejs",
+    "unit",
+    "testing",
+    "mocha",
+    "chai"
+  ],
+  "author": "Balakrishna Avulapati",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bavulapati/nodejs-unit-testing-in-depth/issues"
+  },
+  "homepage": "https://github.com/bavulapati/nodejs-unit-testing-in-depth#readme",
+  "devDependencies": {
+    "mocha": "^7.0.1"
+  }
+}
