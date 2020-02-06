@@ -1,7 +1,7 @@
 const demo = require('./demo')
 const expect = require('chai').expect
 
-describe('testing tests and files in the same directory', () => {
+describe('testing demo', () => {
     context('addTwoNumbers', () => {
         it('should return number', () => {
             const result = demo.addTwoNumbers(3, 5)
@@ -25,6 +25,18 @@ describe('testing tests and files in the same directory', () => {
                 expect(err).to.not.exist
                 expect(result).to.equal(5)
                 done()
+            })
+        })
+    })
+
+    context('call back with promise', () => {
+        it('should test promise',(done) => {
+            demo.addWithPromise(2,3).then((result)=>{
+                expect(result).to.equal(5)
+                done()
+            }).catch((ex) => {
+                console.error('caught error', ex)
+                done(ex)
             })
         })
     })
