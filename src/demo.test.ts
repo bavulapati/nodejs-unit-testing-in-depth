@@ -1,5 +1,8 @@
 const demo = require('./demo')
-const expect = require('chai').expect
+const { expect, use } = require('chai')
+const chaiAsPromised = require('chai-as-promised')
+
+use(chaiAsPromised)
 
 describe('testing demo', () => {
     context('addTwoNumbers', () => {
@@ -38,6 +41,10 @@ describe('testing demo', () => {
                 console.error('caught error', ex)
                 done(ex)
             })
+        })
+
+        it('should test async/await', async () => {
+            await expect(demo.addWithPromise(2, 3)).to.eventually.equal(5)
         })
     })
 })
