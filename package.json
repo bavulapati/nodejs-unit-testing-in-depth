@@ -4,6 +4,9 @@
   "description": "Udemy course - nodejs unit testing in depth",
   "main": "index.js",
   "scripts": {
+    "transpile": "tsc",
+    "coverage": "nyc --reporter=html mocha 'release/**/*.test.js'",
+    "ts-test": "npm run transpile && npm run coverage",
     "test": "mocha './**/*.test.js'"
   },
   "repository": {
@@ -24,7 +27,13 @@
   },
   "homepage": "https://github.com/bavulapati/nodejs-unit-testing-in-depth#readme",
   "devDependencies": {
+    "@types/chai": "^4.2.8",
+    "@types/mocha": "^7.0.1",
+    "@types/node": "^13.7.0",
     "chai": "^4.2.0",
-    "mocha": "^7.0.1"
+    "cross-env": "^7.0.0",
+    "mocha": "^7.0.1",
+    "nyc": "^15.0.0",
+    "typescript": "^3.7.5"
   }
 }
